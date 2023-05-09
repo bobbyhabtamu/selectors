@@ -14,6 +14,14 @@
            li.my-list{
                 background-color:orange;
             }
+
+            div#new-div, li.new-list{
+                background-color:blue;
+            }
+
+            ul.my-kids > li{
+                background-color:green;
+            }
         </style>
     </head>
     <body>
@@ -26,6 +34,7 @@
                 <li><a href="#id">id</a></li>
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
+                <li><a href="#child">child</a></li>
             </ul>
         </nav> 
     </header>           
@@ -66,6 +75,51 @@
               </ul>
             </div>
         </fieldset>
+
+
+
+
+        <fieldset>
+            <legend><a id="compound">compound</a></legend>
+            <p>Compound selectors allow us to use more than one selector for a set of rules. The selectors must be seperated by commmas</p>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>div#new-div, li.new-list{
+                background-color:blue;
+            }</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div id="new-div">I'm inside a div inside of new-div </div>
+            <div>
+              <ul>
+                <li class="new-list">Im inside an li with a class of new-list</li>
+                 <li class="new-list">Im inside an li with a class of new-list</li>
+                 <li class="new-list">Im inside an li with a class of new-list</li>
+              </ul>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend><a id="child">child</a></legend>
+            <p>A child selector allows us to access the elements that are immediately inside the current element.</p>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>ul.my-kids > li{
+                background-color:green;
+            }</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div>
+              <ul class="my-kids">
+                <li>Im inside an li that is a child of a ul with a class of my-kids</li>
+                <li>Im inside an li that is a child of a ul with a class of my-kids</li>
+                <li>Im inside an li that is a child of a ul with a class of my-kids</li>
+              </ul>
+            </div>
+        </fieldset>
+
+
 
         <footer class="page-footer">
             <p><small>&copy; 2023 by 
